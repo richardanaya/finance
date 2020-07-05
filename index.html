@@ -5,6 +5,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css/tufte.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css/latex.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .income-sheet{
+        width: 55%;
+        text-align: center;
+      }
+      .income-sheet table{
+        display: table;
+        width: 450px;
+        border-style: double;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        font-size: 21px;
+      }
+
+
+      .income-sheet table tr td:last-child {
+        text-align: right;
+      }
+
+      .income-sheet table thead tr:first-child td:last-child {
+        font-weight: bold;
+      }
+      .income-sheet table thead tr td:last-child {
+        text-align: left;
+      }
+
+      .income-sheet table thead tr:last-child td {
+        padding-bottom: 15px;
+      }
+
+      .income-sheet table td {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+
+
+      .income-sheet table .summary td:not(:first-child) {
+        border-top: 1px solid rgb(128, 128, 128);
+      }
+
+      .income-sheet table .summary:not(:last-child) td {
+        padding-bottom: 15px;
+      }
+
+
+      @media screen and (max-width: 760px) {
+        .income-sheet {
+          width: 100%;
+        }
+
+        .income-sheet table {
+          width: 100%;
+          font-size: 14px;
+          padding-left: 5px;
+          padding-right: 15px;
+          padding-top: 5px;
+          padding-bottom: 7px;
+        }
+      }
+    </style>
   </head>
   <body>
     <article>
@@ -15,6 +82,41 @@
           This page is a visualization of various types of financial statements. I created
           this website as an exploration into how beautiful this kind of data could be made.
         </p>
+        <div class="income-sheet">
+          <table>
+            <thead>
+              <tr>
+                <td></td><td colspan="2">Income Statement</td>
+              </tr>
+              <tr>
+                <td></td><td colspan="2">($ in millions)</td>
+              </tr>  
+            </thead>
+            <tbody>
+            <tr>
+              <td></td><td>Reveneue</td><td>$10,000</td>
+            </tr>
+            <tr>
+              <td></td><td>Cost of Goods Sold</td><td>1,000</td>
+            </tr>
+            <tr class="summary">
+              <td></td><td>Gross Profit</td><td>900</td>
+            </tr>
+            <tr>
+              <td>🠦</td><td>Operating Expenses</td><td>2,000</td>
+            </tr>
+            <tr>
+              <td></td><td>Selling, General & Admin.</td><td>400</td>
+            </tr>
+            <tr>
+              <td></td><td>Depreciation</td><td>300</td>
+            </tr>
+            <tr class="summary">
+              <td></td><td>Operating Profit</td><td>$2,000</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
       </section>
     </article>
   </body>
