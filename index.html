@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css/latex.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      .income-sheet{
+      .financial-statement{
         width: 55%;
         text-align: center;
       }
 
-      .income-sheet .annotate {
+      .financial-statement .annotate {
         display: inline-block;
         margin-left: -25px;
         padding-right: 3px;
       }
 
-      .income-sheet table{
+      .financial-statement table{
         display: table;
         width: 450px;
         border-style: double;
@@ -31,22 +31,22 @@
         margin-bottom: 25px;
       }
 
-      .income-sheet table tr td:not(:first-child) {
+      .financial-statement table tr td:not(:first-child) {
         text-align: right;
       }
 
-      .income-sheet table thead tr:first-child td:last-child {
+      .financial-statement table thead tr:first-child td:last-child {
         font-weight: bold;
       }
-      .income-sheet table thead tr td:last-child {
+      .financial-statement table thead tr td:last-child {
         text-align: left;
       }
 
-      .income-sheet table thead tr:last-child td {
+      .financial-statement table thead tr:last-child td {
         padding-bottom: 15px;
       }
 
-      .income-sheet table td {
+      .financial-statement table td {
         padding-right: 0px;
         padding-left: 0px;
         margin-left: 0px;
@@ -55,21 +55,21 @@
 
 
 
-      .income-sheet table .summary td {
+      .financial-statement table .summary td {
         border-top: 1px solid rgb(128, 128, 128);
       }
 
-      .income-sheet table .summary:not(:last-child) td {
+      .financial-statement table .summary:not(:last-child) td {
         padding-bottom: 15px;
       }
 
 
       @media screen and (max-width: 760px) {
-        .income-sheet {
+        .financial-statement {
           width: 100%;
         }
 
-        .income-sheet table {
+        .financial-statement table {
           width: 100%;
           font-size: 14px;
           padding-left: 15px;
@@ -78,7 +78,7 @@
           padding-bottom: 7px;
         }
 
-        .income-sheet .annotate {
+        .financial-statement .annotate {
           margin-left: -15px;
           padding-right: 0px;
         }
@@ -94,91 +94,8 @@
           This page is a visualization of various types of financial statements. I want
           to explore how beautiful this kind of data can be made with CSS.
         </p>
-        <div class="income-sheet">
-          <table>
-            <thead>
-              <tr>
-                <td colspan="2">Income Statement</td>
-              </tr>
-              <tr>
-                <td colspan="2">($ in millions)</td>
-              </tr>  
-            </thead>
-            <tbody>
-            <tr>
-              <td>Reveneue</td><td>$10,000</td>
-            </tr>
-            <tr>
-              <td>Cost of Goods Sold</td><td>1,000</td>
-            </tr>
-            <tr class="summary">
-              <td>Gross Profit</td><td>9,000</td>
-            </tr>
-            <tr>
-              <td>Operating Expenses</td><td>2,000</td>
-            </tr>
-            <tr>
-              <td>Selling, General & Admin.</td><td>400</td>
-            </tr>
-            <tr>
-              <td>Depreciation</td><td>300</td>
-            </tr>
-            <tr class="summary">
-              <td>Income Before Taxes</td><td>6,300</td>
-            </tr>
-            <tr>
-              <td>Income Taxes Paid</td><td>2,200</td>
-            </tr>
-            <tr class="summary">
-              <td>Net Earnings</td><td>$4,100</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
 
-        <div class="income-sheet">
-          <table>
-            <thead>
-              <tr>
-                <td colspan="2">Income Statement</td>
-              </tr>
-              <tr>
-                <td colspan="2">($ in millions)</td>
-              </tr>  
-            </thead>
-            <tbody>
-            <tr>
-              <td>Reveneue</td><td>$10,000</td>
-            </tr>
-            <tr>
-              <td>Cost of Goods Sold</td><td>1,000</td>
-            </tr>
-            <tr class="summary">
-              <td>Gross Profit</td><td>9,000</td>
-            </tr>
-            <tr>
-              <td><div class="annotate">→</div>Operating Expenses</td><td>2,000</td>
-            </tr>
-            <tr>
-              <td>Selling, General & Admin.</td><td>400</td>
-            </tr>
-            <tr>
-              <td>Depreciation</td><td>300</td>
-            </tr>
-            <tr class="summary">
-              <td>Income Before Taxes</td><td>6,300</td>
-            </tr>
-            <tr>
-              <td>Income Taxes Paid</td><td>2,200</td>
-            </tr>
-            <tr class="summary">
-              <td>Net Earnings</td><td>$4,100</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-
-        <div class="income-sheet">
+        <div class="financial-statement">
           <table>
             <thead>
               <tr>
@@ -215,6 +132,65 @@
             </tr>
             <tr class="summary">
               <td>Net Earnings</td><td>$4,100</td><td>41%</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+        
+
+        <div class="financial-statement">
+          <table>
+            <thead>
+              <tr>
+                <td colspan="2">Balance Sheet</td>
+              </tr>
+              <tr>
+                <td colspan="2">($ in millions)</td>
+              </tr>  
+            </thead>
+            <tbody>
+            <tr>
+              <td>Total Current Assets</td><td>$12,000</td>
+            </tr>
+            <tr>
+              <td>Goodwill</td><td>1,000</td>
+            </tr>
+            <tr class="summary">
+              <td>Total Assets</td><td>$13,000</td>
+            </tr>
+            <tr>
+              <td><div class="annotate">→</div>Accounts Payable</td><td>$2,000</td>
+            </tr>
+            <tr>
+              <td>Short Term Debt</td><td>400</td>
+            </tr>
+            <tr class="summary">
+              <td>Total Liabilities</td><td>$2,400</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+
+
+        <div class="financial-statement">
+          <table>
+            <thead>
+              <tr>
+                <td colspan="2">Cash Flow</td>
+              </tr>
+              <tr>
+                <td colspan="2">($ in millions)</td>
+              </tr>  
+            </thead>
+            <tbody>
+            <tr>
+              <td>Capital Expenditures</td><td>($500)</td>
+            </tr>
+            <tr>
+              <td>Total Cash Dividents Paid</td><td>(500)</td>
+            </tr>
+            <tr class="summary">
+              <td>Total Cash</td><td>($1,000)</td>
             </tr>
           </tbody>
           </table>
