@@ -11,6 +11,7 @@
         text-align: center;
       }
 
+
       .financial-statement .annotate {
         display: inline-block;
         margin-left: -25px;
@@ -31,7 +32,13 @@
         margin-bottom: 25px;
       }
 
-      .financial-statement table tr td:not(:first-child) {
+
+      .financial-statement.full-width table{
+        width: 100%;
+      }
+
+      .financial-statement table tr td:not(:first-child),
+      .financial-statement table tr th:not(:first-child) {
         text-align: right;
       }
 
@@ -81,6 +88,11 @@
         .financial-statement .annotate {
           margin-left: -15px;
           padding-right: 0px;
+        }
+
+        .financial-statement.full-width table{
+          width: 100%;
+          overflow-x: scroll;
         }
       }
     </style>
@@ -191,6 +203,33 @@
             </tr>
             <tr class="summary">
               <td>Total Cash</td><td>($1,000)</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+
+        <div class="financial-statement full-width">
+          <table>
+            <thead>
+              <tr>
+                <td colspan="2">Income Statement</td>
+              </tr>
+              <tr>
+                <td colspan="2">($ in millions)</td>
+              </tr>  
+            </thead>
+            <tbody>
+            <tr>
+              <th></th><th>2020</th><th>2019</th><th>2018</th><th>2017</th><th>2016</th>
+            </tr>
+            <tr>
+              <td>Reveneue</td><td>$10,000</td><td>9,000</td><td>8,000</td><td>7,000</td><td>6,000</td>
+            </tr>
+            <tr>
+              <td>Cost of Goods Sold</td><td>1,000</td><td>900</td><td>800</td><td>700</td><td>600</td>
+            </tr>
+            <tr class="summary">
+              <td>Gross Profit</td><td>9,000</td><td>8,100</td><td>7,200</td><td>6,300</td><td>5,400</td>
             </tr>
           </tbody>
           </table>
