@@ -61,7 +61,6 @@
       }
 
 
-
       .financial-statement table .summary td {
         border-top: 1px solid rgb(128, 128, 128);
       }
@@ -70,15 +69,23 @@
         padding-bottom: 15px;
       }
 
-
       .financial-statement.full-width.micro table td,
       .financial-statement.full-width.micro table th{
         font-size: 10px;
+        line-height: 8px;
+        white-space: nowrap;
+      }
+
+      .financial-statement.full-width table td:not(:first-child),
+      .financial-statement.full-width table th:not(:first-child) {
+        padding-left: 3px;
       }
 
       .financial-statement.full-width.micro table thead tr:last-child td {
+        white-space: nowrap;
         padding-bottom: 5px;
       }
+
 
       @media screen and (max-width: 760px) {
         .financial-statement {
